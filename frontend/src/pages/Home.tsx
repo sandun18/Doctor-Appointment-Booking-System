@@ -62,7 +62,7 @@ function StatCard({ title, value }: { title: string; value: string }) {
       <p className="mt-2 text-2xl font-bold text-slate-900">{value}</p>
     </div>
   );
-  
+
 }
 
 function Home() {
