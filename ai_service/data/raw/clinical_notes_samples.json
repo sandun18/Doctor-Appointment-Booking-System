@@ -1,0 +1,22 @@
+[
+  {
+    "note_id": "CN-2026-001",
+    "raw_text": "Patient is a 54-year-old male presenting with recurring headache, mild vision blurriness and elevated blood pressure. BP reading recorded at 155/95 mmHg. Diagnosed with essential hypertension. Prescribing Amlodipine 5mg once daily every morning and Telmisartan 40mg at bedtime. Advised dietary sodium restriction and regular aerobic exercise. Instructed to maintain a daily BP log and return for clinical follow-up in 4 weeks.",
+    "expected_diagnoses": ["Essential Hypertension"],
+    "expected_medications": [
+      {"name": "Amlodipine", "dosage": "5mg", "frequency": "Once daily morning"},
+      {"name": "Telmisartan", "dosage": "40mg", "frequency": "Bedtime"}
+    ],
+    "follow_up": "Return in 4 weeks with daily BP log"
+  },
+  {
+    "note_id": "CN-2026-002",
+    "raw_text": "Patient is a 42-year-old female complaining of persistent epigastric burning sensation, frequent acid reflux after meals and occasional mild nausea. Endoscopy shows signs consistent with gastroesophageal reflux disease and mild antral gastritis. Prescribing Esomeprazole 40mg daily 30 minutes before breakfast for 4 weeks and Gaviscon liquid 10ml as needed post meals. Recommended avoiding spicy food and late night eating.",
+    "expected_diagnoses": ["Gastroesophageal Reflux Disease (GERD)", "Mild Antral Gastritis"],
+    "expected_medications": [
+      {"name": "Esomeprazole", "dosage": "40mg", "frequency": "Daily before breakfast for 4 weeks"},
+      {"name": "Gaviscon", "dosage": "10ml", "frequency": "As needed post meals"}
+    ],
+    "follow_up": "Review in 4 weeks if symptoms do not improve"
+  }
+]
