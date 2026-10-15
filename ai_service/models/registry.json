@@ -1,0 +1,27 @@
+{
+  "service_name": "smart-healthcare-ai-service",
+  "version": "1.0.0",
+  "models": {
+    "symptom_triage": {
+      "name": "SymptomSpecialistClassifier",
+      "version": "v0.1.0",
+      "framework": "scikit-learn",
+      "artifact_path": "models/artifacts/symptom_triage_pipeline.joblib",
+      "status": "pending_training"
+    },
+    "disease_risk": {
+      "name": "ChronicDiseaseRiskEstimator",
+      "version": "v0.1.0",
+      "framework": "scikit-learn",
+      "artifact_path": "models/artifacts/disease_risk_rf.joblib",
+      "status": "pending_training"
+    },
+    "clinical_summarizer": {
+      "name": "ClinicalNoteSummarizer",
+      "version": "v0.1.0",
+      "framework": "transformers",
+      "model_id": "facebook/bart-large-cnn",
+      "status": "pending_download"
+    }
+  }
+}
