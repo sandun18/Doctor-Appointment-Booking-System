@@ -1,0 +1,3 @@
+"""
+MedicareAI Modular Apps Domain.
+"""
