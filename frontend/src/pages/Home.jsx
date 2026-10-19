@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Search, MapPin, Play, ShieldCheck, Star, 
   Heart, Baby, Brain, Eye, Stethoscope, Activity, 
@@ -101,13 +102,13 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button className="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all">
+              <Link to="/doctors" className="px-6 py-3.5 bg-[#00a884] hover:bg-[#009272] text-white font-semibold rounded-2xl shadow-md transition-all">
                 Book Appointment
-              </button>
-              <button className="px-6 py-3.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl flex items-center space-x-2 transition-all">
-                <Play className="w-4 h-4 fill-current" />
-                <span>Watch How It Works</span>
-              </button>
+              </Link>
+              <Link to="/ai-health-hub" className="px-6 py-3.5 bg-emerald-50 hover:bg-emerald-100 text-[#00a884] font-semibold rounded-2xl flex items-center space-x-2 transition-all border border-emerald-200/60">
+                <Brain className="w-4 h-4 text-[#00a884]" />
+                <span>Try AI Symptom Triage</span>
+              </Link>
             </div>
           </div>
 
