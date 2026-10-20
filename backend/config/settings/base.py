@@ -134,7 +134,18 @@ SIMPLE_JWT = {
     'USER_ID_CLAIM': 'user_id',
 }
 
-# External Microservices Configuration
-AI_SERVICE_URL = os.getenv('AI_SERVICE_URL', 'http://localhost:8001')
-MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017/medicare_ehr')
+# Caching Architecture (Redis with local fallback)
 REDIS_URL = os.getenv('REDIS_URL', 'redis://localhost:6379/0')
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': REDIS_URL,
+        'TIMEOUT': 300,
+        'KEY_PREFIX': 'medicare',
+    }
+}
+
+# External Microservices & Multi-Database Configuration
+AI_SERVICE_URL = os.getenv('AI_SERVICE_URL', 'http://localhost:8001')
+MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017')
+MONGO_DB_NAME = os.getenv('MONGO_DB_NAME', 'medicare_ehr')

@@ -11,11 +11,34 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
+from django.db import connection
+from core.mongodb import check_mongo_health
+from core.redis_client import check_redis_health
+
 def health_check(request):
+    db_status = "connected"
+    db_engine = "unknown"
+    try:
+        connection.ensure_connection()
+        db_engine = connection.vendor
+    except Exception as exc:
+        db_status = f"disconnected: {str(exc)}"
+
+    mongo_status = check_mongo_health()
+    redis_status = check_redis_health()
+
     return JsonResponse({
-        "status": "healthy",
+        "status": "healthy" if db_status == "connected" else "degraded",
         "service": "medicare-ai-backend",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "databases": {
+            "relational_db": {
+                "engine": db_engine,
+                "status": db_status
+            },
+            "mongodb_ehr": mongo_status,
+            "redis_cache": redis_status,
+        }
     })
 
 urlpatterns = [
