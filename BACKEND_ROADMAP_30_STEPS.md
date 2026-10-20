@@ -39,7 +39,7 @@
     └── requirements.txt
     ```
 
-- [ ] **Step 02: Python Virtual Environment & Dependency Locking**
+- [x] **Step 02: Python Virtual Environment & Dependency Locking**
   - Initialize isolated virtualenv for Django (`backend/venv`).
   - Configure production dependencies:
     - Web & Framework: `django`, `djangorestframework`, `django-cors-headers`, `drf-spectacular`
