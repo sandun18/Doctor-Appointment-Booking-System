@@ -1,0 +1,38 @@
+# ==============================================================================
+# MedicareAI Healthcare Platform — Backend Requirements
+# Django REST Framework, PostgreSQL, MongoDB, Redis & Celery Microservice Stack
+# ==============================================================================
+
+# Core Web Framework & REST APIs
+Django>=4.2.7,<5.0.0
+djangorestframework>=3.14.0
+django-cors-headers>=4.3.1
+drf-spectacular>=0.26.5
+django-filter>=23.4
+
+# Authentication, Authorization & Security
+djangorestframework-simplejwt>=5.3.1
+cryptography>=41.0.0
+django-environ>=0.11.2
+
+# Database Drivers & Connection Pooling
+psycopg2-binary>=2.9.9
+dj-database-url>=2.1.0
+pymongo>=4.6.1
+
+# Caching, Distributed Locks & Message Broker
+redis>=5.0.1
+celery>=5.3.6
+django-celery-beat>=2.5.0
+
+# Asynchronous HTTP & Microservice Client
+httpx>=0.26.0
+
+# Production Deployment & ASGI/WSGI Servers
+gunicorn>=21.2.0
+uvicorn[standard]>=0.27.0
+
+# Testing & Quality Assurance
+pytest>=7.4.3
+pytest-django>=4.7.0
+pytest-cov>=4.1.0

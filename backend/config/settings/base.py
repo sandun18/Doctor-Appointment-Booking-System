@@ -27,6 +27,8 @@ THIRD_PARTY_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
+    'drf_spectacular',
+    'django_filters',
 ]
 
 LOCAL_APPS = [
@@ -110,6 +112,15 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'core.pagination.StandardResultsSetPagination',
     'PAGE_SIZE': 20,
     'EXCEPTION_HANDLER': 'core.exceptions.custom_exception_handler',
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# DRF Spectacular OpenAPI 3.0 Settings
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'MedicareAI Healthcare Platform API',
+    'DESCRIPTION': 'Production-Grade Healthcare Appointment, Telehealth & Clinical EHR System',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 
 # Simple JWT Configuration
