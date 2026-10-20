@@ -19,7 +19,7 @@
 
 ## 🏗️ Phase 1: Architecture, Scaffolding & Environment Setup (Steps 1–5)
 
-- [ ] **Step 01: Project Directory Scaffolding & Microservice Architecture**
+- [x] **Step 01: Project Directory Scaffolding & Microservice Architecture**
   - Establish a clean, decoupled modular monolith for the core business domain + API gateway, alongside the FastAPI AI microservice:
     ```text
     backend/

@@ -1,0 +1,3 @@
+"""
+Appointments app package initialization.
+"""
